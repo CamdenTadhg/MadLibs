@@ -1,0 +1,16 @@
+label {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+section {
+    font-size:2rem;
+    width:50%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/app.css">
-    <title>Madlib Form</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Madlib Form{% endblock title %}
+
+{% block content %}
     <h1>Madlibs</h1>
     <form action="/story">
         {% for prompt in story.prompts %}
@@ -17,5 +13,4 @@
         {% endfor %}
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
+{% endblock content %}    

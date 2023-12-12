@@ -62,17 +62,3 @@ horror = Story(
     ["name", "adjective", "sound", "noun", "comparative_adjective", "plural_noun_2", "verb", "plural_noun_3", "adverb", "adjective_2", "body_part"], 
     """Late at night, {name} heard {adjective} {sound} coming from their {noun}, but when they opened the {noun}, there was nothing inside. As they tried to go back to sleep, the {sound} grew {comparative_adjective}, and the {plural_noun_2} seemed to {verb} on the {plural_noun_3}. {adverb}, a {adjective_2} hand touched their {body_part}, and {name}'s heart raced as they realized they were not alone in their room."""
 )
-
-
-
-#make page display form for prompts
-#create route for story page
-#make story page display story
-#add template inheritance
-#give option to select one of the five stories
-#add styles
-#validate inputs
-#create route for new story page
-#create links to new story page
-#create form for entering new story
-#add new story to story list on input

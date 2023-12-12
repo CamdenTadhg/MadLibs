@@ -7,20 +7,28 @@ app.config['SECRET_KEY'] = "secret"
 
 debug = DebugToolbarExtension(app)
 
+selection = ''
+
 @app.route('/')
-def show_form():
+def select_story():
+    """allow user to select a story to play with"""
+    stories = ['fantasy', 'horror', 'mystery', 'romance', 'scifi']
+    return render_template("select.html", stories=stories)
+
+@app.route('/form')
+def collect_words():
     """display a form to gather madlib input words"""
-    return render_template("form.html", story=fantasy)
+    selection = request.args["stories"]
+    return render_template("form.html", story=eval(selection))
 
 @app.route('/story')
 def show_story():
     """display the complete story with form input added"""
-    output_story = fantasy.generate(request.args)
-    print(output_story)
+    selection = fantasy
+    output_story = selection.generate(request.args)
     return render_template("story.html", story=output_story)
 
 
-#add template inheritance
 #give option to select one of the five stories
 #add styles
 #validate inputs

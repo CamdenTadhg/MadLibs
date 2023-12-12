@@ -7,7 +7,7 @@
     <form action="/story" id="prompt-form">
         {% for prompt in story.prompts %}
         <div>
-            <label for="{{prompt}}" id="prompt-label">{{prompt}}:
+            <label for="{{prompt}}" id="prompt-label" class="tooltip" title="{{helperText[prompt]}}">{{prompt}}:
                 <input type="text" name="{{prompt}}">
             </label>
         </div>

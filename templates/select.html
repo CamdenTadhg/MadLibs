@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Madlibs</h1>
-    <form action="/form">
+    <form action="/form" id="select-form">
         <label for="stories">Select Your Story:</label>
         <select name="stories" id="stories">
             {% for story in stories %}

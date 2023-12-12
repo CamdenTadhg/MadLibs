@@ -4,11 +4,13 @@
 
 {% block content %}
     <h1>Madlibs</h1>
-    <form action="/story">
+    <form action="/story" id="prompt-form">
         {% for prompt in story.prompts %}
-        <label for="{{prompt}}" id="prompt-label">{{prompt}}:
-            <input type="text" name="{{prompt}}">
-        </label>
+        <div>
+            <label for="{{prompt}}" id="prompt-label">{{prompt}}:
+                <input type="text" name="{{prompt}}">
+            </label>
+        </div>
         <br>
         {% endfor %}
         <button type="submit" id="word-button">Submit</button>

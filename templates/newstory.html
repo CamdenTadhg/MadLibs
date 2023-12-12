@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}New Story Form{% endblock %}
+
+{% block heading %}
+    <h1>New Story Form</h1>
+{% endblock %}
+
+{% block content %}
+<form id="new-story-form" action="/submitted">
+<p>Give your story a name.</p>
+<input type="text" name="story_name" id="story-name">
+<p>Enter your story here. Be sure to put your parts of speech inside curly braces like this, {noun}, and combine multiple words with underscores like this, {past_tense_verb}</p>
+<textarea name="story_text" cols="200" rows="10" id="story-text"></textarea>
+<p>Enter your parts of speech here. Be sure your parts of speech match up with the ones in your story exactly. It should look like this: "noun verb gerund noun_2 verb_2 sound name"  </p>
+<textarea name="parts_of_speech" cols="200" rows="10" id="parts-of-speech"></textarea>
+<button type="submit" id="new-story-button">Submit</button>
+</form>
+{% endblock %}
+

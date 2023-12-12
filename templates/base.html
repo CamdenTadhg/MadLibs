@@ -8,9 +8,19 @@
     <title>{% block title %}  {% endblock %}</title>
 </head>
 <body>
+    {% block heading %}
+
+    {% endblock %}
+    <div class="link-div">
+      <a href="/">Start over</a>
+    </div>
+    <div class="link-div">
+      <a class="new-story-link" href="/newstory">Enter a new story</a>
+    </div>
     {% block content %}
     
     {% endblock %}
+
     <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="

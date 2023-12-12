@@ -2,10 +2,14 @@
 
 {% block title %}Madlib Form{% endblock %}
 
-{% block content %}
+{% block heading %}
     <h1>Madlibs</h1>
+{% endblock %}
+
+
+{% block content %}
     <form action="/story" id="prompt-form">
-        {% for prompt in story.prompts %}
+        {% for prompt in story_option.prompts %}
         <div>
             <label for="{{prompt}}" id="prompt-label" class="tooltip" title="{{helperText[prompt]}}">{{prompt}}:
                 <input type="text" name="{{prompt}}">

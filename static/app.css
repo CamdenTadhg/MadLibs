@@ -1,10 +1,4 @@
-div {
-    margin:0;
-    padding: 0;
-    line-height: 1rem;
-}
-
-label {
+label, p {
     padding: 10px;
     font-size: 2rem;
     line-height: 2rem;
@@ -33,7 +27,7 @@ h1 {
     display: none;
 }
 
-input {
+input, textarea {
     font-size: 2rem;
     display: inline-block;
     width: 50%;
@@ -61,4 +55,30 @@ button {
     color: red;
     font-size: 2rem;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+a {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif
+
+}
+
+.link-div {
+    width: 100%;
+    text-align:center;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+#new-story-form {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+#new-story-button{
+    display: block;
+    margin-left: 46%
 }

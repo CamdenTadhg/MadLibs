@@ -1,25 +1,35 @@
 $promptForm = $('#prompt-form');
 $promptInputs = $('input');
-$promptLabels = $('label');
+$newStoryForm = $('#new-story-form');
+$storyText = $('#story-text');
+$partsOfSpeech = $('#parts-of-speech');
+$storyName = $('#story-name');
 
-counter=0
+let counter = 0;
 
-$promptForm.on('submit', validate_form);
+$promptForm.on('submit', validate_prompt_form);
+$newStoryForm.on('submit', validate_new_story_form);
 
-function validate_form(event) {
-    originalEvent = event;
-    if (counter = 0){
-        event.preventDefault();
-    }
-    errorlog = false
+function validate_prompt_form(event) {
     for (let input of $promptInputs.get()){
         if (input.value === ''){
-            errorlog = true;
+            event.preventDefault();
             input.placeholder = "INPUT REQUIRED"
         }
     }
-    if (errorlog === false){
-        counter = 1;
-        $(this).trigger(originalEvent);
+}
+
+function validate_new_story_form(event) {
+    if ($storyName[0].value === '' || $storyName[0].value === undefined){
+        event.preventDefault();
+        $storyName[0].placeholder = "INPUT REQUIRED";
+    }
+    if ($storyText[0].value === '' || $storyText[0].value === undefined){
+        event.preventDefault();
+        $storyText[0].placeholder = "INPUT REQUIRED";
+    }
+    if ($partsOfSpeech[0].value === '' || $partsOfSpeech[0].value === undefined){
+        event.preventDefault();
+        $partsOfSpeech[0].placeholder = "INPUT REQUIRED";
     }
 }

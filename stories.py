@@ -54,8 +54,8 @@ scifi = Story(
 )
 
 mystery = Story(
-    ["adjective", "place", "adjective_2", "name", "plural_noun", "building", "past_tense_verb", "past_tense_verb_2", "adjective_3", "noun", "gerund", "gerund_2"],
-    """In the {adjective} town of {place}, a {adjective_2} detective named {name} noticed strange {plural_noun} near the old {building}. Determined to solve the mystery, they {past_tense_verb} the clues and {past_tense_verb_2} a hidden door behind a {adjective_3} bookshelf. Behind the door, {name} found a robber's lair filled with missing {noun}, {gerund} the mystery of the {gerund_2} {noun} in their town."""
+    ["adjective", "place", "adjective_2", "name", "plural_noun", "building", "past_tense_verb", "past_tense_verb_2", "adjective_3", "noun", "plural_noun_2", "gerund", "gerund_2"],
+    """In the {adjective} town of {place}, a {adjective_2} detective named {name} noticed strange {plural_noun} near the old {building}. Determined to solve the mystery, they {past_tense_verb} the clues and found a hidden {noun} behind a {adjective_3} bookshelf. Behind the door, {name} found a robber's lair filled with missing {plural_noun_2}, {gerund} the mystery of the {gerund_2} {noun_2} in their town."""
 )
 
 horror = Story(

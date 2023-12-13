@@ -8,7 +8,7 @@
 
 
 {% block content %}
-    <form action="/story" id="prompt-form">
+    <form action="/{{selection}}" id="prompt-form">
         {% for prompt in story_option.prompts %}
         <div>
             <label for="{{prompt}}" id="prompt-label" class="tooltip" title="{{helperText[prompt]}}">{{prompt}}:

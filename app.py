@@ -1,5 +1,5 @@
-from flask import Flask, request, render_template
-from stories import Story, fantasy, romance, scifi, mystery, horror, stories_dict
+from flask import Flask, request, render_template, session
+from stories import Story, stories_dict
 from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
@@ -37,7 +37,11 @@ def show_story_form():
 @app.route('/submitted')
 def process_new_story():
     """process new story data and add it to current story list"""
+    story_name = request.args["story_name"]
+    space_count = story_name.count(' ')
+    processed_story_name = story_name.replace(' ', '_', space_count)
+    story_text = request.args["story_text"]
+    parts_of_speech = request.args["parts_of_speech"]
+    processed_parts_of_speech = parts_of_speech.split(' ')
+    #this is not currently complete. I don't know what to do next
     return render_template("submitted.html")
-
-
-#add new story to story list on input
